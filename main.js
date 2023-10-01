@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         QQ空间说说删除脚本
 // @namespace    none
-// @version      1.0.4
+// @version      1.0.5
 // @description  用于一键删除QQ空间的说说，附带空间简约风美化
 // @author       gogofishman
 // @license      MIT
@@ -109,7 +109,7 @@ async function Beautify() {
     //移除flash悬浮窗
     WaitUntilAction(() => document.getElementById('flowerContainerDiv'));
     //移除开通黄钻
-    WaitUntilAction(() => document.getElementById('QM_Container_3').children[1]);
+    WaitUntilAction(() => document.getElementsByClassName('fn_accessLog_tips bg2 bor2')[0]);
     WaitUntilAction(() => document.getElementById('tb_vip_li'));
     //移除签到
     WaitUntilAction(() => document.getElementById('QM_Container_31'));
