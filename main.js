@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         QQ空间说说删除脚本
 // @namespace    none
-// @version      1.0.2
+// @version      1.0.3
 // @description  用于一键删除QQ空间的说说，大概700毫秒左右删除一条
 // @author       gogofishman
 // @license      MIT
@@ -18,11 +18,14 @@ var number = '0';
 (function () {
     'use strict';
 
+    //添加删除面板
     window.onload = AddDiv;
 })();
 
 //添加控制面板
 function AddDiv() {
+    Beautify();
+
     let newDiv = document.createElement('div');
     newDiv.id = 'ShuoShuoDelete';
 
@@ -77,12 +80,56 @@ function AddDiv() {
     }
 }
 
+//空间界面美化
+function Beautify() {
+    Print('美化空间');
+    //移除flash悬浮窗
+    WaitUntilRemove(() => document.getElementById('flowerContainerDiv'));
+    //移除开通黄钻
+    WaitUntilRemove(() => document.getElementById('QM_Container_3').children[1]);
+    //移除签到
+    WaitUntilRemove(() => document.getElementById('QM_Container_31'));
+    WaitUntilRemove(() => document.getElementById('QM_Container_100005'));
+    //移除天气
+    WaitUntilRemove(() => document.getElementById('weather-module'));
+    //移除小游戏
+    WaitUntilRemove(() => document.getElementById('leftMenu').children[1]);
+}
+
 function sleep(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
 function Print(text) {
     console.log(`[说说脚本] - ${text}`);
+}
+
+/**
+ * 异步执行当某个元素出现时立马删除它
+ * @param {function} element 返回指定元素的函数
+ * @param {number} step 每次检查间隔时间 ms
+ * @param {number} timeOut 超时时间 ms
+ * @returns {Promise<void>}
+ * @constructor
+ */
+async function WaitUntilRemove(element, step = 50, timeOut = 1000 * 30) {
+    let count = 0;
+    let outCount = timeOut / step;
+
+    while (count <= outCount) {
+        count++;
+        await sleep(step);
+        try {
+            let _c = element();
+            if (_c != null) {
+                console.log('移除元素', _c);
+                _c.remove();
+                return;
+            }
+        } catch (e) {
+
+        }
+    }
 }
 
 /**
