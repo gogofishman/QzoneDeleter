@@ -1,5 +1,7 @@
 ﻿[跳转到油猴脚本页面](https://greasyfork.org/zh-CN/scripts/476407-qq%E7%A9%BA%E9%97%B4%E8%AF%B4%E8%AF%B4%E5%88%A0%E9%99%A4%E8%84%9A%E6%9C%AC)
 
+## 预览
+![](https://p.sda1.dev/13/ded70766fb2ee99f3a6e2bf9b2df57ba/QQ截图20231001202014.jpg)
 
 ## 功能
 
