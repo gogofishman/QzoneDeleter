@@ -1,12 +1,12 @@
 ﻿[跳转到油猴脚本页面](https://greasyfork.org/zh-CN/scripts/476407-qq%E7%A9%BA%E9%97%B4%E8%AF%B4%E8%AF%B4%E5%88%A0%E9%99%A4%E8%84%9A%E6%9C%AC)
 
 ## 预览
-![](https://p.sda1.dev/13/a84290877ef8259f1823795e78fc544b/预览图jpg.jpg)
 
+![](https://p.sda1.dev/13/a84290877ef8259f1823795e78fc544b/预览图jpg.jpg)
 
 ## 功能
 
-* 一件批量删除空间说说
+* 一件批量删除空间说说（700毫秒左右删除一条）
 * 移除flash悬浮窗
 * 移除开通黄钻
 * 移除签到

@@ -2,7 +2,7 @@
 // @name         QQ空间说说删除脚本
 // @namespace    none
 // @version      1.0.3
-// @description  用于一键删除QQ空间的说说，大概700毫秒左右删除一条
+// @description  用于一键删除QQ空间的说说，附带空间简约美化
 // @author       gogofishman
 // @license      MIT
 // @include      *://user.qzone.qq.com/*
